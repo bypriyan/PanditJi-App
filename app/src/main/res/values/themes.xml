@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PanditJi" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/app_bg_color</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/avd_pujari_logo</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/app_bg_color</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <item name="postSplashScreenTheme">@style/Theme.PanditJi</item>
+    </style>
+
+    <style name="Theme.PanditJi" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/appColor</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="CustomRatingBar" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorControlActivated">#FFD700</item> <!-- Gold -->
+    </style>
+</resources>
