@@ -26,7 +26,7 @@
             app:destination="@id/registrationFragment" />
         <action
             android:id="@+id/action_loginFragment_to_profileDetailsFragment"
-            app:destination="@id/profileDetailsFragment" />
+            app:destination="@id/professionalDetailsFragment" />
         <action
             android:id="@+id/action_loginFragment_to_UserNamesFragment"
             app:destination="@id/UserNamesFragment" />
@@ -60,14 +60,18 @@
             app:argType="string" />
         <action
             android:id="@+id/action_otpFragment_to_profileDetailsFragment"
-            app:destination="@id/profileDetailsFragment" />
+            app:destination="@id/professionalDetailsFragment" />
 
     </fragment>
 
     <fragment
-        android:id="@+id/profileDetailsFragment"
-        android:name="com.socialseller.panditji.UI.auth.ProfileDetailsFragment"
+        android:id="@+id/professionalDetailsFragment"
+        android:name="com.socialseller.panditji.UI.auth.ProfessionalDetailFragment"
         android:label="ProfileDetails">
+
+        <action
+            android:id="@+id/action_professionalDetailsFragment_to_BioFragment"
+            app:destination="@id/BioFragment" />
 
     </fragment>
 
@@ -97,6 +101,57 @@
         <action
             android:id="@+id/action_NewPasswordFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/BioFragment"
+        android:name="com.socialseller.panditji.UI.auth.forgot.BioFragment"
+        android:label="Bio">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.socialseller.panditji.UI.home.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_HomeFragment_to_NotificationFragment"
+            app:destination="@id/NotificationFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_ChatFragment"
+            app:destination="@id/ChatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/NotificationFragment"
+        android:name="com.socialseller.panditji.UI.notification.NotificationFragment"
+        android:label="Notification">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ChatFragment"
+        android:name="com.socialseller.panditji.UI.home.ChatFragment"
+        android:label="Chat">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/WalletFragment"
+        android:name="com.socialseller.panditji.UI.home.WalletFragment"
+        android:label="Withdraw">
+
+        <action
+            android:id="@+id/action_WalletFragment_to_WithdrawFragment"
+            app:destination="@id/WithdrawFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/WithdrawFragment"
+        android:name="com.socialseller.panditji.UI.home.Wallet.WithdrawFragment"
+        android:label="Withdraw">
+
     </fragment>
 
 </navigation>

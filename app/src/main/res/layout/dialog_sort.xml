@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:layout_margin="8dp"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort by"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Sort Options -->
+        <RadioGroup
+            android:id="@+id/radioGroupSort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioStarsLowToHigh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stars : Low To High"
+                android:textColor="#FF9800"
+                android:buttonTint="#FF9800"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioStarsHighToLow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stars : High To Low"
+                android:textColor="#000000"
+                android:buttonTint="#FF9800" />
+
+            <RadioButton
+                android:id="@+id/radioDateOldToNew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date : Old To New"
+                android:textColor="#000000"
+                android:buttonTint="#FF9800" />
+
+            <RadioButton
+                android:id="@+id/radioDateNewToOld"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date : New To Old"
+                android:textColor="#000000"
+                android:buttonTint="#FF9800" />
+        </RadioGroup>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnClearAll"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clear all"
+                android:textColor="#FF9800"
+                app:strokeColor="#FF9800"
+                app:strokeWidth="1dp"
+                android:layout_marginEnd="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnApply"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Apply"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FF9800" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/rating_star.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#E0E0E0" /> <!-- Background color for unfilled stars -->
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <shape>
+            <solid android:color="#FFEB3B" /> <!-- Partial fill color for stars -->
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <shape>
+            <solid android:color="#FFC107" /> <!-- Filled stars color -->
+        </shape>
+    </item>
+</layer-list>

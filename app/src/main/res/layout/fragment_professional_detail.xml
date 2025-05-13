@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD">
+
+    <!-- Top Right Design -->
+    <ImageView
+        android:id="@+id/topRightImage"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:alpha="0.7"
+        android:contentDescription="Top right design"
+        android:src="@drawable/top_left_design"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Bottom Left Design -->
+    <ImageView
+        android:id="@+id/bottomLeftImage"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:alpha="0.7"
+        android:contentDescription="Bottom left design"
+        android:src="@drawable/bottom_right_design"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Scrollable Form Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="24dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/_27sdp"
+                android:layout_height="@dimen/_27sdp"
+                android:background="@drawable/white_bg_greay_outline_background"
+                android:contentDescription="Back button"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/back_icon"
+                app:tint="@color/bg" />
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Professional Details"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Enter the Basic Details required for us."
+                android:textColor="#888888"
+                android:textSize="14sp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/temp_pandit_new"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circle" />
+
+
+            <!-- Form Fields (As before) -->
+            <!-- Example Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_greay_outline_background"
+                    android:hint="Location"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/greay" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Experience -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_greay_outline_background"
+                    android:hint="Experience in years"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/greay" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Puja Type Dropdown (Non-editable) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:hintEnabled="true"
+                android:hint="Puja Type">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pujaTypeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:clickable="true"
+                    android:inputType="none"
+                    android:background="@drawable/white_bg_greay_outline_background"
+                    android:textColor="@color/greay"
+                    android:textColorHint="@color/greay" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/pujaContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp" />
+
+
+
+            <!-- Puja -->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                app:hintEnabled="false">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/white_bg_greay_outline_background"-->
+<!--                    android:hint="Puja"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textColorHint="@color/greay" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash; Chat Rate &ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                app:hintEnabled="false">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/white_bg_greay_outline_background"-->
+<!--                    android:hint="Chat Rate"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textColorHint="@color/greay" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash; Call Rate &ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                app:hintEnabled="false">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/white_bg_greay_outline_background"-->
+<!--                    android:hint="Call Rate"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textColorHint="@color/greay" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash; Puja Name &ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                app:hintEnabled="false">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/white_bg_greay_outline_background"-->
+<!--                    android:hint="Puja Name"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textColorHint="@color/greay" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash; Chat Rate Again &ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                app:hintEnabled="false">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/white_bg_greay_outline_background"-->
+<!--                    android:hint="Chat Rate"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textColorHint="@color/greay" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash; Call Rate Again &ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                app:hintEnabled="false">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/white_bg_greay_outline_background"-->
+<!--                    android:hint="Call Rate"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textColorHint="@color/greay" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!-- Submit Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:text="SUBMIT"
+                android:backgroundTint="@color/appColor"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:cornerRadius="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
